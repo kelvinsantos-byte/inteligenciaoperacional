@@ -29,39 +29,39 @@
 <div id="calendars"></div>
 
 <script>
-/* CAMINHOS ATUALIZADOS COM UNDERLINE (_) */
+/* CORREÇÃO: PASTA 'img' EM MINÚSCULO E NOMES COM UNDERLINE */
 const meses = [
   {
     nome: "JANEIRO", mes: 0, campanha: "Campanha de Segurança – Janeiro",
-    arte: { frente: "Img/01_JANEIRO/Frente.JPG", verso: "Img/01_JANEIRO/Verso.JPG" }
+    arte: { frente: "img/01_JANEIRO/Frente.JPG", verso: "img/01_JANEIRO/Verso.JPG" }
   },
   {
     nome: "FEVEREIRO", mes: 1, campanha: "Campanha de Segurança – Fevereiro",
-    arte: { frente: "Img/02_FEVEREIRO/Frente.JPG", verso: "Img/02_FEVEREIRO/Verso.JPG" }
+    arte: { frente: "img/02_FEVEREIRO/Frente.JPG", verso: "img/02_FEVEREIRO/Verso.JPG" }
   },
   { 
     nome: "MARÇO", mes: 2, campanha: "Campanha de Segurança – Março",
-    arte: { frente: "Img/03_MARÇO/Frente.JPG", verso: "Img/03_MARÇO/Verso.JPG" }
+    arte: { frente: "img/03_MARÇO/Frente.JPG", verso: "img/03_MARÇO/Verso.JPG" }
   },
   { 
     nome: "ABRIL", mes: 3, campanha: "Campanha de Segurança – Abril",
-    arte: { frente: "Img/04_ABRIL/Frente.JPG", verso: "Img/04_ABRIL/Verso.JPG" }
+    arte: { frente: "img/04_ABRIL/Frente.JPG", verso: "img/04_ABRIL/Verso.JPG" }
   },
   { 
     nome: "MAIO", mes: 4, campanha: "Campanha de Segurança – Maio",
-    arte: { frente: "Img/05_MAIO/Frente.JPG", verso: "Img/05_MAIO/Verso.JPG" }
+    arte: { frente: "img/05_MAIO/Frente.JPG", verso: "img/05_MAIO/Verso.JPG" }
   },
   { 
     nome: "JULHO", mes: 6, campanha: "Campanha de Segurança – Julho",
-    arte: { frente: "Img/07_JULHO/Frente.JPG", verso: "Img/07_JULHO/Verso.JPG" }
+    arte: { frente: "img/07_JULHO/Frente.JPG", verso: "img/07_JULHO/Verso.JPG" }
   },
   { 
     nome: "SETEMBRO", mes: 8, campanha: "Campanha de Segurança – Setembro",
-    arte: { frente: "Img/09_SETEMBRO/Frente.JPG", verso: "Img/09_SETEMBRO/Verso.JPG" }
+    arte: { frente: "img/09_SETEMBRO/Frente.JPG", verso: "img/09_SETEMBRO/Verso.JPG" }
   },
   { 
     nome: "DEZEMBRO", mes: 11, campanha: "Campanha de Segurança – Dezembro",
-    arte: { frente: "Img/12_DEZEMBRO/Frente.JPG", verso: "Img/12_DEZEMBRO/Verso.JPG" }
+    arte: { frente: "img/12_DEZEMBRO/Frente.JPG", verso: "img/12_DEZEMBRO/Verso.JPG" }
   }
 ];
 
@@ -110,11 +110,9 @@ function mostrarArte(index) {
     return;
   }
   area.style.display = "block";
-  
-  // O comando abaixo força o recarregamento se houver erro
   area.innerHTML = `
-    <img src="${mesData.arte.frente}" alt="Frente" onerror="this.src='https://via.placeholder.com/400x300?text=Erro+no+Caminho'">
-    <img src="${mesData.arte.verso}" alt="Verso" onerror="this.src='https://via.placeholder.com/400x300?text=Erro+no+Caminho'">
+    <img src="${mesData.arte.frente}" alt="Frente">
+    <img src="${mesData.arte.verso}" alt="Verso">
   `;
 }
 
