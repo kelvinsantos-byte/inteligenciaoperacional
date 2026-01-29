@@ -29,7 +29,7 @@
 <div id="calendars"></div>
 
 <script>
-/* CORREÇÃO: PASTA 'img' EM MINÚSCULO E NOMES COM UNDERLINE */
+/* CONFIGURAÇÃO COM PASTA 'img' E EXTENSÃO '.JPG' */
 const meses = [
   {
     nome: "JANEIRO", mes: 0, campanha: "Campanha de Segurança – Janeiro",
@@ -104,15 +104,14 @@ function gerarDias(mesIndex) {
 function mostrarArte(index) {
   const area = document.getElementById(`arte-${index}`);
   const mesData = meses[index];
-  
   if (area.style.display === "block") {
     area.style.display = "none";
     return;
   }
   area.style.display = "block";
   area.innerHTML = `
-    <img src="${mesData.arte.frente}" alt="Frente">
-    <img src="${mesData.arte.verso}" alt="Verso">
+    <img src="${mesData.arte.frente}" alt="Frente" onerror="console.log('Erro ao carregar: ' + this.src)">
+    <img src="${mesData.arte.verso}" alt="Verso" onerror="console.log('Erro ao carregar: ' + this.src)">
   `;
 }
 
